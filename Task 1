@@ -1,0 +1,12 @@
+function func(s, a, b) {
+	let aIndex = s.indexOf(a);
+	let bIndex = s.indexOf(b);
+
+	let result = 
+	( aIndex !== -1 && bIndex == -1 )?aIndex:
+	( aIndex == -1 && bIndex !== -1 )?bIndex:
+	( aIndex !== -1 && bIndex !== -1 )?Math.max(aIndex, bIndex):
+	-1;
+
+	return result;
+}
